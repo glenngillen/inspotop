@@ -1,0 +1,15 @@
+{
+  "name": "inspotop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.5.0",
+    "wallpaper": "^4.4.0"
+  }
+}
