@@ -45,15 +45,16 @@ loadImage(background).then((image) => {
     canvas.height = image.height
     ctx.drawImage(image, 0, 0)
 
-    ctx.font = '200px "Yanone Kaffeesatz"'
+    const textHeight = 100
+    ctx.font = textHeight.toString() + 'px "Yanone Kaffeesatz"'
     var text = ctx.measureText(phrase)
-    xPos = image.width - 200 - text.width
-    yPos = image.height - 100 - 400
-    ctx.lineWidth = 30
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)'
+    xPos = 100
+    yPos = image.height - 100 - textHeight
+    ctx.lineWidth = 15
+    ctx.strokeStyle = 'rgba(0, 0, 0, 0.7)'
     ctx.strokeText(phrase, xPos, yPos)
 
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
     ctx.fillText(phrase, xPos, yPos)
 
     let filename = __dirname + '/assets/generated/' + Math.random().toString(36).substr(2, 5) + '.jpg'
