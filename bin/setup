@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+cd -P "$(dirname SOURCE)" 
+BASE=$(pwd -P)
+sudo rm ~/Library/LaunchAgents/com.glenngillen.inspotop.plist 
+sed "s|inspopath|$BASE|g" ./LaunchAgent/com.glenngillen.inspotop.plist > ~/Library/LaunchAgents/com.glenngillen.inspotop.plist
+sudo launchctl bootout gui/$UID ~/Library/LaunchAgents/com.glenngillen.inspotop.plist
+sudo launchctl bootstrap gui/$UID ~/Library/LaunchAgents/com.glenngillen.inspotop.plist
+launchctl kickstart gui/$UID/com.glenngillen.inspotop

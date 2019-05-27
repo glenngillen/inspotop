@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin/:$PATH</string>
+        <key>Label</key>
+        <string>com.glenngillen.inspotop</string>
+        <key>Program</key>
+        <string>inspopath/bin/rotate</string>
+        <key>StartInterval</key>
+        <integer>86400</integer>
+        <key>StandardErrorPath</key>
+        <string>/tmp/mycommand.err</string>
+        <key>StandardOutPath</key>
+        <string>/tmp/mycommand.out</string>
+    </dict>
+</plist>

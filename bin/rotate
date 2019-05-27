@@ -1,0 +1,5 @@
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+export PATH=/usr/local/bin/:$PATH
+cd -P "$(dirname $SOURCE)/.." && node ./generate.js
