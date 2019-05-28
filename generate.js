@@ -1,4 +1,5 @@
 const fs = require('fs')
+const mkdirp = require('mkdirp')
 const wallpaper = require('wallpaper')
 const { registerFont, createCanvas, loadImage } = require('canvas')
 registerFont('assets/fonts/YanoneKaffeesatz-Regular.otf', { family: 'Yanone Kaffeesatz' })
@@ -57,7 +58,9 @@ loadImage(background).then((image) => {
     ctx.fillStyle = 'rgba(255, 255, 255, 0.95)'
     ctx.fillText(phrase, xPos, yPos)
 
-    let filename = __dirname + '/assets/generated/' + Math.random().toString(36).substr(2, 5) + '.jpg'
+    let generatedPath = __dirname + '/assets/generated'
+    mkdirp.sync(generatedPath)
+    let filename = generatedPath + '/' + Math.random().toString(36).substr(2, 5) + '.jpg'
     const out = fs.createWriteStream(filename)
     const stream = canvas.createJPEGStream({
         quality: 0.95,

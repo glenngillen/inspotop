@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.5.0",
+    "mkdirp": "^0.5.1",
     "wallpaper": "^4.4.0"
   }
 }
