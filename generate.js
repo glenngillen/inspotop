@@ -24,7 +24,7 @@ const backgrounds = fs.readdirSync(backgroundPath).map(file => {
 
 const phrase     = phrases[Math.floor(Math.random() * phrases.length)]
 const background = backgrounds[Math.floor(Math.random() * backgrounds.length)]
-const textHeight = 100
+const textHeight = 30
 
 const generatedPath = __dirname + '/assets/generated'
 
@@ -94,9 +94,9 @@ screenshot.all().then((imgs) => {
             drawImageProp(ctx, image, 0, 0, screen.width, screen.height, 0.5, 0.5)
 
             ctx.font = textHeight.toString() + 'px "Yanone Kaffeesatz"'
-            xPos = 100
+            xPos = textHeight
             yPos = screen.height - textHeight
-            ctx.lineWidth = 15
+            ctx.lineWidth = 5
             ctx.strokeStyle = 'rgba(0, 0, 0, 0.7)'
             ctx.strokeText(phrase, xPos, yPos)
 
