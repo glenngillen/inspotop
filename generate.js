@@ -5,33 +5,17 @@ const screenshot = require('screenshot-desktop')
 const { registerFont, createCanvas, loadImage, Image } = require('canvas')
 registerFont('assets/fonts/YanoneKaffeesatz-Regular.otf', { family: 'Yanone Kaffeesatz' })
 const values = [
-    'Considered, but contestable.',
-    'Be curious.',
-    'Appreciate the craft.',
-    'Do more with less.',
-    'Own outcomes, not ideas.',
-    'Say no, explicitly.',
-    'Make others successful.',
-    'Look for lessons, create teachable moments.',
-    'Be present.'
+    'Considered, but contestable',
+    'Be curious',
+    'Appreciate the craft',
+    'Do more with less',
+    'Own outcomes, not ideas',
+    'Say no, explicitly',
+    'Make others successful',
+    'Look for lessons, create teachable moments',
+    'Be present'
 ]
-const leadershipPrinciples = [
-    'Customer obsession.',
-    'Ownership.',
-    'Invent & simplify.',
-    'Are right, a lot.',
-    'Learn & be curious.',
-    'Hire & develop the best.',
-    'Insist on the highest standards.',
-    'Think big.',
-    'Bias for action.',
-    'Frugality.',
-    'Earn trust.',
-    'Dive deep.',
-    'Have backbone; disagree & commit.',
-    'Deliver results.'
-]
-const phrases = values.concat(leadershipPrinciples)
+const phrases = values
 
 const backgroundPath = 'assets/backgrounds'
 const backgrounds = fs.readdirSync(backgroundPath).map(file => {
